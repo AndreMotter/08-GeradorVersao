@@ -5,7 +5,7 @@
       "Nome": "Gespam",
       "CaminhoWeb": "C:\\Users\\andre.motter\\Desktop\\SISTEMAS\\GESPAM_2\\GespamWeb\\GespamWeb.Web",
       "CaminhoApi": "",
-      "CaminhoPublish": "\\bin\\release\\net6.0\\publish",
+      "CaminhoPublish": "\\bin\\release\\net7.0\\publish",
       "RodarNpm": "true"
     },
     {
