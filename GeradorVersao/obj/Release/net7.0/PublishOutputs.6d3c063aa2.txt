@@ -1,0 +1,7 @@
+C:\Users\andre.motter\Desktop\SISTEMAS\GERADOR_VERSOES\GeradorVersao\GeradorVersao\bin\Release\net7.0\publish\config.json
+C:\Users\andre.motter\Desktop\SISTEMAS\GERADOR_VERSOES\GeradorVersao\GeradorVersao\bin\Release\net7.0\publish\GeradorVersao.exe
+C:\Users\andre.motter\Desktop\SISTEMAS\GERADOR_VERSOES\GeradorVersao\GeradorVersao\bin\Release\net7.0\publish\GeradorVersao.dll
+C:\Users\andre.motter\Desktop\SISTEMAS\GERADOR_VERSOES\GeradorVersao\GeradorVersao\bin\Release\net7.0\publish\GeradorVersao.deps.json
+C:\Users\andre.motter\Desktop\SISTEMAS\GERADOR_VERSOES\GeradorVersao\GeradorVersao\bin\Release\net7.0\publish\GeradorVersao.runtimeconfig.json
+C:\Users\andre.motter\Desktop\SISTEMAS\GERADOR_VERSOES\GeradorVersao\GeradorVersao\bin\Release\net7.0\publish\GeradorVersao.pdb
+C:\Users\andre.motter\Desktop\SISTEMAS\GERADOR_VERSOES\GeradorVersao\GeradorVersao\bin\Release\net7.0\publish\Newtonsoft.Json.dll

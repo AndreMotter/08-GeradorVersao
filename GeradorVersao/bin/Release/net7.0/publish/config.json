@@ -1,0 +1,19 @@
+{
+  "destino": "C:\\VERSOES_SISTEMAS",
+  "sistemas": [
+    {
+      "Nome": "Gespam",
+      "CaminhoWeb": "C:\\Users\\andre.motter\\Desktop\\SISTEMAS\\GESPAM_2\\GespamWeb\\GespamWeb.Web",
+      "CaminhoApi": "",
+      "CaminhoPublish": "\\bin\\release\\net6.0\\publish",
+      "RodarNpm": "true"
+    },
+    {
+      "Nome": "Portal Cidadao",
+      "CaminhoWeb": "C:\\Users\\andre.motter\\Desktop\\SISTEMAS\\PORTAL_CIDADAO\\portal_cidadao\\Cidadao.Web",
+      "CaminhoApi": "C:\\Users\\andre.motter\\Desktop\\SISTEMAS\\PORTAL_CIDADAO\\portal_cidadao\\Cidadao.API",
+      "CaminhoPublish": "\\bin\\release\\net6.0\\publish",
+      "RodarNpm": "false"
+    }
+  ]
+}
