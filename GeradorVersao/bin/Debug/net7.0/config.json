@@ -1,6 +1,7 @@
 {
-  "destino": "C:\\VERSOES_SISTEMAS",
-  "sistemas": [
+  "Destino": "C:\\Users\\andre.motter\\Desktop\\VERSOES",
+  "Logs": "false",
+  "Sistemas": [
     {
       "Nome": "Gespam",
       "CaminhoWeb": "C:\\Users\\andre.motter\\Desktop\\SISTEMAS\\GESPAM_2\\GespamWeb\\GespamWeb.Web",
@@ -20,6 +21,13 @@
       "CaminhoWeb": "C:\\Users\\andre.motter\\Desktop\\SISTEMAS\\PROCESSO_DIGITAL\\ProcessoDigital\\ProcessoDigital.Web",
       "CaminhoApi": "C:\\Users\\andre.motter\\Desktop\\SISTEMAS\\PROCESSO_DIGITAL\\ProcessoDigital\\ProcessoDigital.API",
       "CaminhoPublish": "\\bin\\release\\net6.0\\publish",
+      "RodarNpm": "false"
+    },
+    {
+      "Nome": "Api Relatórios",
+      "CaminhoWeb": "",
+      "CaminhoApi": "C:\\Users\\andre.motter\\Desktop\\SISTEMAS\\API_RELATORIOS\\relatorios-gespam\\App.Api",
+      "CaminhoPublish": "\\bin\\release\\net7.0\\publish",
       "RodarNpm": "false"
     }
   ]

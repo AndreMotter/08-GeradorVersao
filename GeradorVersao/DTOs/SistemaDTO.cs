@@ -9,6 +9,7 @@ namespace GeradorVersao.DTOs
     public class ListaSistema
     {
         public string Destino { get; set; }
+        public bool Logs { get; set; }
         public List<Sistema> Sistemas { get; set; }
     }
 
