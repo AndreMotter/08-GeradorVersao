@@ -20,13 +20,13 @@ class Program
         {
             Console.WriteLine("-------------------- Arquivo config.json não encontrado.");
         }
-        var config = File.ReadAllText("config.json");
-        var lista_sistemas = JsonConvert.DeserializeObject<ListaSistema>(config);
+        var json_config = File.ReadAllText("config.json");
+        var config = JsonConvert.DeserializeObject<ConfigDTO>(json_config);
 
         Console.WriteLine("Escolha um sistema para gerar a versão:");
-        for (int i = 0; i < lista_sistemas?.Sistemas?.Count; i++)
+        for (int i = 0; i < config?.Sistemas?.Count; i++)
         {
-            Console.WriteLine($"{i + 1}. {lista_sistemas.Sistemas[i].Nome}");
+            Console.WriteLine($"{i + 1}. {config.Sistemas[i].Nome}");
         }
         Console.WriteLine($"--------------------");
 
@@ -38,10 +38,10 @@ class Program
             return;
         }
 
-        if (escolha >= 1 && escolha <= lista_sistemas.Sistemas.Count)
+        if (escolha >= 1 && escolha <= config.Sistemas.Count)
         {
-            var sistemaSelecionado = lista_sistemas.Sistemas[escolha - 1];
-            GerarVersao(lista_sistemas.Destino, sistemaSelecionado, lista_sistemas.Logs ? 1 : 0);
+            var sistemaSelecionado = config.Sistemas[escolha - 1];
+            GerarVersao(config.Destino, sistemaSelecionado, config.Logs ? 1 : 0, config.LimparDestinoCadaVersao ? 1 : 0);
         }
         else
         {
@@ -69,14 +69,14 @@ class Program
             Environment.Exit(0);
         }
     }
-    static void GerarVersao(string destino, Sistema sistema, int ver_progresso)
+    static void GerarVersao(string destino, Sistema sistema, int ver_progresso, int limpar_destino_cada_versao)
     {
         Console.WriteLine($"-------------------- {DateTime.Now.ToString("HH:mm:ss")} Gerando versão: {sistema.Nome}");
 
-        string destino_zip = $@"{destino}\{sistema.Nome.ToUpper().Replace(" ", "")}";
-        if (!Directory.Exists(destino_zip))
+        if (string.IsNullOrEmpty(destino))
         {
-            Directory.CreateDirectory(destino_zip);
+            Console.WriteLine($"-------------------- Informe o Destino da versão");
+            return;
         }
 
         if (string.IsNullOrEmpty(sistema.CaminhoPublish))
@@ -89,6 +89,21 @@ class Program
         {
             Console.WriteLine($"-------------------- Informe o CaminhoWeb e/ou CaminhoApi do sistema {sistema.Nome}");
             return;
+        }
+
+        string destino_zip = $@"{destino}\{sistema.Nome.ToUpper().Replace(" ", "")}";
+        if (!Directory.Exists(destino_zip))
+        {
+            Directory.CreateDirectory(destino_zip);
+        }
+
+        if (limpar_destino_cada_versao == 1)
+        {
+            Console.WriteLine(@$"-------------------- {DateTime.Now.ToString("HH:mm:ss")} Limpando o diretório final {destino_zip}");
+            if (Directory.Exists(destino_zip))
+            {
+                Directory.GetFiles(destino_zip).ToList().ForEach(File.Delete);
+            }
         }
 
         if (!string.IsNullOrEmpty(sistema.CaminhoWeb))

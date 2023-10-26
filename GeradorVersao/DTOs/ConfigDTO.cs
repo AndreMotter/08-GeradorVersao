@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace GeradorVersao.DTOs
 {
-    public class ListaSistema
+    public class ConfigDTO
     {
         public string Destino { get; set; }
         public bool Logs { get; set; }
+        public bool LimparDestinoCadaVersao { get; set; }
         public List<Sistema> Sistemas { get; set; }
     }
 

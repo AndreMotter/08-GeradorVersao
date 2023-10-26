@@ -1,5 +1,6 @@
 {
   "Destino": "C:\\Users\\andre.motter\\Desktop\\VERSOES",
+  "LimparDestinoCadaVersao": "true",
   "Logs": "false",
   "Sistemas": [
     {
